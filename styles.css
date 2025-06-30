@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+    --heading-color: hsl(234, 12%, 34%);
+    --paragraph-color: hsl(229, 6%, 66%);
+    --main-background: hsl(0, 0%, 98%);
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Style the title */
+.title {
+    text-align: center;
+}
+
+.title h2:first-child {
+    font-weight: 400;
+}
+
+.title p {
+    max-width: 50%;
+    margin: 10px auto 20px;
+}
+
+/* Apply grid to the card container */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+}
+
+/* Style the card */
+.card {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 3px var(--paragraph-color), 0 4px 10px var(--paragraph-color);
+}
+
+.card:nth-of-type(1) {
+    margin-bottom: 30px;
+}
+
+.card p {
+    margin: 10px 0 20px;
+}
+
+.card img {
+    float: right;
+}
+
+/* Utilize classes */
+p {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--paragraph-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.bt-red {
+    border-top: 3.5px solid var(--red-color);
+}
+
+.bt-cyan {
+    border-top: 3.5px solid var(--cyan-color);
+}
+
+.bt-blue {
+    border-top: 3.5px solid var(--blue-color);
+}
+
+.bt-orange {
+    border-top: 3.5px solid var(--orange-color);
+}
+
+/* Responsive to mobile */
+@media (max-width: 450px) {
+    html {
+        padding: 20px;
+        margin-top: 400px;
+    }
+    .card-container {
+        display: block;
+    }
+    .title p {
+        max-width: 95%;
+    }
+    .card:nth-of-type(2) {
+        margin-bottom: 30px;
+    }
+}
